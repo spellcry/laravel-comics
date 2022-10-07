@@ -31,10 +31,110 @@
     }
 }
 
+// Main Content
+.main-content {
+    background-color: $color-dark;
+    color: $color-white;
+    .container {
+        text-align: center;
+        .load-more {
+            padding: 0.8rem 4rem;
+            margin-bottom: 1rem;
+            border: none;
+            background-color: $color-acc;
+            color: $color-white;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+    }
+}
+
+// Hero
+.hero {            
+    height: 350px;
+    // background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+// Cards
+.cards {
+    position: relative;
+    @include paddingBlock;
+    .current-series {
+        position: absolute;
+        top: 0;
+        padding: 0.5rem 1rem;
+        transform: translateY(-50%);
+        background-color: $color-acc;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .cards__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem 1.5rem;
+        padding-inline: 1rem;
+        .list__item {
+            flex-basis: calc(calc(100% - 1.5rem * 5) / 6);
+        }
+    }
+}
+
+// Card
+.card {
+    text-align: left;
+    cursor: pointer;
+    transition: transform 150ms ease-in-out;
+    .card__img {
+        margin-bottom: 1rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: top;
+    }
+    .title {
+        text-transform: uppercase;
+        color: #bbb;
+    }
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+// Sidebar
+.main-sidebar {
+    background-color: $color-acc;
+    color: $color-white;
+    @include paddingBlock;
+    .aside__list {
+        display: flex;
+        justify-content: space-around;
+        .list__item {
+            flex-basis: 15%;                                
+        }
+    }
+}
+
+// Sidebar Widget
+a {
+    display: flex;
+    align-items: center;       
+    height: 100%;    
+    white-space: nowrap;    
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 1rem;
+    }
+}
 
 // Footer
 .footer__nav {
-    background-image: url('../img/footer-bg.jpg');
+    // background-image: url('../img/footer-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     .container {
@@ -45,8 +145,57 @@
         gap: 2rem;
         max-height: 500px;
         @include paddingBlock;
-        background-image: url('../img/dc-logo-bg.png');
+        // background-image: url('../img/dc-logo-bg.png');
         background-repeat: no-repeat;
         background-position: center right;
+    }
+}
+
+.list-wrapper {
+    .title {
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        .list__item {
+            a {
+                font-size: 0.8rem;
+                color: #888;
+            }
+        }
+    }
+}
+
+.footer__actions {
+    background-color: #303030;
+    .container {
+        display: flex;
+        align-items: center;
+        padding-block: 1.5rem;
+    }
+    .cta {
+        padding: 1rem;
+        border: 2px solid $color-acc;
+        color: $color-white;
+        font-weight: bold;
+        background-color: transparent;
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $color-acc;
+        text-transform: uppercase;
+        img {
+            cursor: pointer;
+        }
     }
 }

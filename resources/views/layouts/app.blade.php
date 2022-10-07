@@ -12,9 +12,12 @@
     @include('partials.header')
     
     {{-- Content --}}
-    <main>
+    <main class="main-content">
         @yield('content')
     </main>
+
+    {{-- Sidebar --}}
+    @yield('sidebar', '')
 
     {{-- Footer --}}
     @include('partials.footer')
