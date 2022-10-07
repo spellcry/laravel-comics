@@ -2,34 +2,8 @@
 @import './partials/mixins';
 @import './partials/general';
 
-// Header
-.main-header {
-    .container {
-        display: flex;
-        align-items: center;
-        .nav {                
-            margin-left: auto;
-            .nav__list {
-                display: flex;
-                gap: 2rem;
-                .list__item {
-                    padding-block: 4rem;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 0.85rem;
-                    border-bottom: 5px solid transparent;                    
-                    &.active, &:hover {
-                        color: $color-acc;
-                        border-bottom-color: $color-acc;
-                    }
-                    a {
-                        color: $color-dark;
-                    }
-                }
-            }
-        }
-    }
-}
+@import './header.scss';
+@import './footer.scss';
 
 // Main Content
 .main-content {
@@ -129,73 +103,5 @@ a {
         max-width: 50px;
         max-height: 50px;
         margin-right: 1rem;
-    }
-}
-
-// Footer
-.footer__nav {
-    // background-image: url('../img/footer-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    .container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        gap: 2rem;
-        max-height: 500px;
-        @include paddingBlock;
-        // background-image: url('../img/dc-logo-bg.png');
-        background-repeat: no-repeat;
-        background-position: center right;
-    }
-}
-
-.list-wrapper {
-    .title {
-        margin-bottom: 0.3rem;
-        font-size: 1.2rem;
-        color: $color-white;
-        text-transform: uppercase;
-    }
-    .nav__list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        .list__item {
-            a {
-                font-size: 0.8rem;
-                color: #888;
-            }
-        }
-    }
-}
-
-.footer__actions {
-    background-color: #303030;
-    .container {
-        display: flex;
-        align-items: center;
-        padding-block: 1.5rem;
-    }
-    .cta {
-        padding: 1rem;
-        border: 2px solid $color-acc;
-        color: $color-white;
-        font-weight: bold;
-        background-color: transparent;
-    }
-    .socials {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-left: auto;
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: $color-acc;
-        text-transform: uppercase;
-        img {
-            cursor: pointer;
-        }
     }
 }
