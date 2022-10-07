@@ -1,1 +1,52 @@
-//
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/general';
+
+// Header
+.main-header {
+    .container {
+        display: flex;
+        align-items: center;
+        .nav {                
+            margin-left: auto;
+            .nav__list {
+                display: flex;
+                gap: 2rem;
+                .list__item {
+                    padding-block: 4rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 0.85rem;
+                    border-bottom: 5px solid transparent;                    
+                    &.active, &:hover {
+                        color: $color-acc;
+                        border-bottom-color: $color-acc;
+                    }
+                    a {
+                        color: $color-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Footer
+.footer__nav {
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 2rem;
+        max-height: 500px;
+        @include paddingBlock;
+        background-image: url('../img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+}

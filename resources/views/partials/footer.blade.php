@@ -1,1 +1,1 @@
-Footer
+@include('partials.footer_nav')
