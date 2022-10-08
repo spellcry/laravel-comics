@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;
-
-700&display=swap);* {
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -33,16 +31,13 @@ a {
   display: flex;
   align-items: center;
 }
-
 .main-header .container .nav {
   margin-left: auto;
 }
-
 .main-header .container .nav .nav__list {
   display: flex;
   gap: 2rem;
 }
-
 .main-header .container .nav .nav__list .list__item {
   padding-block: 4rem;
   text-transform: uppercase;
@@ -50,22 +45,19 @@ a {
   font-size: 0.85rem;
   border-bottom: 5px solid transparent;
 }
-
-.main-header .container .nav .nav__list .list__item.active,
-.main-header .container .nav .nav__list .list__item:hover {
+.main-header .container .nav .nav__list .list__item.active, .main-header .container .nav .nav__list .list__item:hover {
   color: #0282F9;
   border-bottom-color: #0282F9;
 }
-
 .main-header .container .nav .nav__list .list__item a {
   color: #1C1C1C;
 }
 
 .footer__nav {
+  background-image: url("../img/footer-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .footer__nav .container {
   display: flex;
   flex-direction: column;
@@ -74,6 +66,7 @@ a {
   gap: 2rem;
   max-height: 500px;
   padding-block: 3rem;
+  background-image: url("../img/dc-logo-bg.png");
   background-repeat: no-repeat;
   background-position: center right;
 }
@@ -84,13 +77,11 @@ a {
   color: #fff;
   text-transform: uppercase;
 }
-
 .list-wrapper .nav__list {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
-
 .list-wrapper .nav__list .list__item a {
   font-size: 0.8rem;
   color: #888;
@@ -99,13 +90,11 @@ a {
 .footer__actions {
   background-color: #303030;
 }
-
 .footer__actions .container {
   display: flex;
   align-items: center;
   padding-block: 1.5rem;
 }
-
 .footer__actions .cta {
   padding: 1rem;
   border: 2px solid #0282F9;
@@ -113,7 +102,6 @@ a {
   font-weight: bold;
   background-color: transparent;
 }
-
 .footer__actions .socials {
   display: flex;
   align-items: center;
@@ -124,7 +112,6 @@ a {
   color: #0282F9;
   text-transform: uppercase;
 }
-
 .footer__actions .socials img {
   cursor: pointer;
 }
@@ -133,11 +120,9 @@ a {
   background-color: #1C1C1C;
   color: #fff;
 }
-
 .main-content .container {
   text-align: center;
 }
-
 .main-content .container .load-more {
   padding: 0.8rem 4rem;
   margin-bottom: 1rem;
@@ -150,6 +135,7 @@ a {
 
 .hero {
   height: 350px;
+  background-image: url("../img/jumbotron.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -159,7 +145,6 @@ a {
   position: relative;
   padding-block: 3rem;
 }
-
 .cards .current-series {
   position: absolute;
   top: 0;
@@ -169,14 +154,12 @@ a {
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .cards .cards__list {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 1.5rem;
   padding-inline: 1rem;
 }
-
 .cards .cards__list .list__item {
   flex-basis: calc((100% - 7.5rem) / 6);
 }
@@ -186,7 +169,6 @@ a {
   cursor: pointer;
   transition: transform 150ms ease-in-out;
 }
-
 .card .card__img {
   margin-bottom: 1rem;
   aspect-ratio: 1;
@@ -195,12 +177,10 @@ a {
   -o-object-position: top;
      object-position: top;
 }
-
 .card .title {
   text-transform: uppercase;
   color: #bbb;
 }
-
 .card:hover {
   transform: scale(1.02);
 }
@@ -210,12 +190,10 @@ a {
   color: #fff;
   padding-block: 3rem;
 }
-
 .main-sidebar .aside__list {
   display: flex;
   justify-content: space-around;
 }
-
 .main-sidebar .aside__list .list__item {
   flex-basis: 15%;
 }
@@ -229,10 +207,8 @@ a {
   text-transform: uppercase;
   font-size: 0.85rem;
 }
-
 a img {
   max-width: 50px;
   max-height: 50px;
   margin-right: 1rem;
 }
-

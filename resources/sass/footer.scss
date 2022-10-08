@@ -1,6 +1,6 @@
 // Footer
 .footer__nav {
-    // background-image: url("../img/footer-bg.jpg");
+    background-image: url("../img/footer-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     .container {
@@ -11,7 +11,7 @@
         gap: 2rem;
         max-height: 500px;
         @include paddingBlock;
-        // background-image: url("../img/dc-logo-bg.png");
+        background-image: url("../img/dc-logo-bg.png");
         background-repeat: no-repeat;
         background-position: center right;
     }
