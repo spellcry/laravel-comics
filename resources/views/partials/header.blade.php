@@ -20,8 +20,8 @@ $links = [
         </div>
         <nav class="nav">
             <ul class="nav__list">
-                @foreach ($links as $link)
-                    <li class="list__item"><a href="#">{{ $link }}</a></li>                    
+                @foreach ($links as $key => $link)
+                    <li class="{{ $loop->iteration == 2 ? 'active' : '' }} list__item"><a href="#">{{ $link }}</a></li>                    
                 @endforeach
             </ul>
         </nav>
