@@ -112,3 +112,58 @@
         }
     }
 }
+
+// Comic
+.comic {
+    background-color: $color-white;
+    padding-block: 4rem;
+    .container {
+        .row {
+            display: flex;
+            .col-70 {
+                flex-basis: 70%;
+            }
+            .col-30 {
+                flex-basis: 30%;
+            }
+        }
+        text-align: left;
+        .title {
+            text-transform: uppercase;
+            color: $color-dark_blue;
+            margin-bottom: 1rem;
+        }
+        .status {
+            display: flex;
+            background-color: $color-dark_green;
+            color: $color-light_green;
+            margin-bottom: 1rem;
+            .accent {
+                color: $color-white;
+            }
+            .price,
+            .availability,
+            .check-availability {
+                padding-block: 1rem;
+            }
+
+            .price {
+                margin-right: auto;   
+                padding-left: 1rem;             
+            }
+            .availability {
+                padding-right: 1rem;
+                border-right: 1px solid $color-dark_blue;
+                text-transform: uppercase;
+            }
+            .check-availability {
+                padding-inline: 1rem;
+            }
+        }
+        .description {
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: rgba($color: $color-dark, $alpha: 0.6);
+        }
+    }
+}

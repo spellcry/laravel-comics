@@ -217,3 +217,56 @@ a {
   max-height: 50px;
   margin-right: 1rem;
 }
+
+.comic {
+  background-color: #fff;
+  padding-block: 4rem;
+}
+.comic .container {
+  text-align: left;
+}
+.comic .container .row {
+  display: flex;
+}
+.comic .container .row .col-70 {
+  flex-basis: 70%;
+}
+.comic .container .row .col-30 {
+  flex-basis: 30%;
+}
+.comic .container .title {
+  text-transform: uppercase;
+  color: #263F5E;
+  margin-bottom: 1rem;
+}
+.comic .container .status {
+  display: flex;
+  background-color: #55BA59;
+  color: #9AF999;
+  margin-bottom: 1rem;
+}
+.comic .container .status .accent {
+  color: #fff;
+}
+.comic .container .status .price,
+.comic .container .status .availability,
+.comic .container .status .check-availability {
+  padding-block: 1rem;
+}
+.comic .container .status .price {
+  margin-right: auto;
+  padding-left: 1rem;
+}
+.comic .container .status .availability {
+  padding-right: 1rem;
+  border-right: 1px solid #263F5E;
+  text-transform: uppercase;
+}
+.comic .container .status .check-availability {
+  padding-inline: 1rem;
+}
+.comic .container .description {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: rgba(28, 28, 28, 0.6);
+}
