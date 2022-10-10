@@ -1,15 +1,45 @@
 @php
 $links = [
-    'Characters',
-    'Comics',
-    'Movies',
-    'Tv',
-    'Games',
-    'Collectibles',
-    'Videos',
-    'Fans',
-    'News',
-    'Shop',
+    [
+        'text' => 'Characters',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Comics',
+        'routeName' => 'comics.index'
+    ],
+    [
+        'text' => 'Movies',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Tv',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Games',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Collectibles',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Videos',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Fans',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'News',
+        'routeName' => 'home'
+    ],
+    [
+        'text' => 'Shop',
+        'routeName' => 'home'
+    ],
 ]; 
 @endphp
 
@@ -20,8 +50,10 @@ $links = [
         </div>
         <nav class="nav">
             <ul class="nav__list">
-                @foreach ($links as $key => $link)
-                    <li class="{{ $loop->iteration == 2 ? 'active' : '' }} list__item"><a href="#">{{ $link }}</a></li>                    
+                @foreach ($links as $link)
+                    <li class="{{ Request::route()->getName() === $link['routeName'] ? 'active' : '' }} list__item">                        
+                        <a href="{{ isset($link['routeName']) ? route($link['routeName']) : '/' }}">{{ $link['text'] }}</a>
+                    </li>
                 @endforeach
             </ul>
         </nav>

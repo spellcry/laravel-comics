@@ -13,9 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
+    return view('home');
+})->name('home');
+
+Route::get('/comics', function() {
     $data = [
         'comics' => config('comics')
     ];
-    return view('home', $data);
-});
+    return view('comics.index', $data);
+})->name('comics.index');
+
+Route::get('/comic/{index}', function($index) {
+    $comics = config('comics');
+    if ( $index < count($comics) ) {
+        $data = [
+            'comic' => $comics[$index]
+        ];
+        return view('comics.show', $data);
+    } else {
+        abort(404);
+    }
+})->where('index', '[0-9]+')->name('comics.show');

@@ -5,7 +5,9 @@
     <ul class="cards__list">
         @foreach ($comics as $comic)
             <li class="list__item">
-                @include('partials.card', ['comic' => $comic])
+                <a href="{{ route('comics.show', $loop->index)}}">
+                    @include('partials.card', ['comic' => $comic])
+                </a>
             </li>
         @endforeach
     </ul>
