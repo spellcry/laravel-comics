@@ -220,7 +220,7 @@ a {
 
 .comic {
   background-color: #fff;
-  padding-block: 4rem;
+  padding-top: 4rem;
 }
 .comic .container {
   text-align: left;
@@ -228,11 +228,24 @@ a {
 .comic .container .row {
   display: flex;
 }
-.comic .container .row .col-70 {
+.comic .container .description .row {
+  margin-bottom: 4rem;
+}
+.comic .container .description .row .col-70 {
   flex-basis: 70%;
 }
-.comic .container .row .col-30 {
+.comic .container .description .row .col-30 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   flex-basis: 30%;
+  color: rgba(28, 28, 28, 0.6);
+  text-transform: uppercase;
+}
+.comic .container .description .row .col-30 .intro {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 .comic .container .title {
   text-transform: uppercase;
@@ -265,8 +278,45 @@ a {
 .comic .container .status .check-availability {
   padding-inline: 1rem;
 }
-.comic .container .description {
+.comic .container .description_text {
   font-size: 0.85rem;
   line-height: 1.75;
+  color: rgba(28, 28, 28, 0.6);
+}
+.comic .info {
+  padding-block: 1rem 4rem;
+  background-color: #F6F6F6;
+}
+.comic .info .row {
+  gap: 2rem;
+}
+.comic .info .col-50 {
+  flex-basis: 50%;
+}
+.comic .info .col-50 .title {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+}
+.comic .info .col-50 .list-item {
+  display: flex;
+  gap: 3rem;
+  padding-block: 0.5rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee;
+}
+.comic .info .col-50 .list-item .description {
+  flex-basis: 100px;
+  flex-shrink: 0;
+  color: #263F5E;
+}
+.comic .info .col-50 .list-item .content {
+  color: #24afff;
+}
+.comic .info .col-50 .list-item .content.series {
+  text-transform: uppercase;
+}
+.comic .info .col-50 .list-item .content.price, .comic .info .col-50 .list-item .content.sale_date {
   color: rgba(28, 28, 28, 0.6);
 }

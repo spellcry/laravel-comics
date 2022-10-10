@@ -116,17 +116,32 @@
 // Comic
 .comic {
     background-color: $color-white;
-    padding-block: 4rem;
+    padding-top: 4rem;
     .container {
         .row {
             display: flex;
-            .col-70 {
-                flex-basis: 70%;
-            }
-            .col-30 {
-                flex-basis: 30%;
-            }
         }
+        .description {
+            .row {
+                margin-bottom: 4rem;
+                .col-70 {
+                    flex-basis: 70%;
+                }
+                .col-30 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    flex-basis: 30%;
+                    color: $color-dark-grey;
+                    text-transform: uppercase;
+                    .intro {
+                        margin-bottom: 5px;
+                        font-size: 0.85rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }        
         text-align: left;
         .title {
             text-transform: uppercase;
@@ -160,10 +175,48 @@
                 padding-inline: 1rem;
             }
         }
-        .description {
+        .description_text {
             font-size: 0.85rem;
             line-height: 1.75;
-            color: rgba($color: $color-dark, $alpha: 0.6);
+            color: $color-dark-grey;
         }
+    }
+    .info {       
+        padding-block: 1rem 4rem;
+        background-color: $color-light_grey;
+        .row {
+            gap: 2rem;
+        }
+        .col-50 {            
+            flex-basis: 50%;
+            .title {
+                margin-bottom: 0;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eee;
+                text-transform: capitalize;
+            }
+            .list-item {
+                display: flex;
+                gap: 3rem;
+                padding-block: 0.5rem;
+                font-size: 0.85rem;
+                border-bottom: 1px solid #eee;
+                .description {
+                    flex-basis: 100px;
+                    flex-shrink: 0;
+                    color: $color-dark_blue;
+                }
+                .content {
+                    color: $color-acc_light;
+                    &.series {
+                        text-transform: uppercase;
+                    }
+                    &.price,
+                    &.sale_date {
+                        color: $color-dark-grey;
+                    }
+                }
+            }
+        } 
     }
 }
